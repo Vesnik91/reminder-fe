@@ -1,0 +1,11 @@
+<div [ngClass]="'login-form'">
+    <form>
+        <md-input-container [ngClass]="'login'" floatPlaceholder="never">
+            <input [(ngModel)]="login" name="login" mdInput placeholder="Login" type="email">
+        </md-input-container>
+        <md-input-container [ngClass]="'password'" floatPlaceholder="never">
+            <input [(ngModel)]="password" name="password" mdInput placeholder="Password" type="password">
+        </md-input-container>
+        <button md-raised-button color="primary" (click)="onLoginButtonClick()">LOGIN</button>
+    </form>
+</div>

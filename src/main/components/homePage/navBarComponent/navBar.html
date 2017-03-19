@@ -1,0 +1,26 @@
+<div [ngClass]="'nav-bar-wrapper'">
+    <div [ngClass]="'nav-bar-menu-icon-button-wrapper'">
+        <button md-mini-fab [ngClass]="'nav-bar-menu-icon-button'" (click)="menuIconClick()">
+            <i [ngClass]="'material-icons'">menu</i>
+        </button>
+    </div>
+    <div [ngClass]="'nav-bar-list-wrapper'">
+        <ul [ngClass]="'nav-bar-list'">
+            <li [ngClass]="'nav-bar-list-item'">
+                <a href="#">Home</a>
+            </li>
+            <li [ngClass]="'nav-bar-list-item'">
+                <a href="#">Some Link</a>
+            </li>
+            <li [ngClass]="'nav-bar-list-item'">
+                <a href="#">Some Link</a>
+            </li>
+            <li [ngClass]="'nav-bar-list-item'">
+                <a href="#">Some Link</a>
+            </li>
+        </ul>
+    </div>
+    <div [ngClass]="'login-form-wrapper'">
+        <login-form></login-form>
+    </div>
+</div>

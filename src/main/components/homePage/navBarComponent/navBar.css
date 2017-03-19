@@ -1,0 +1,44 @@
+.nav-bar-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #00bcd4;
+    overflow: hidden;
+}
+
+.nav-bar-wrapper .nav-bar-menu-icon-button-wrapper {
+    display: inline-block;
+}
+
+.nav-bar-wrapper .nav-bar-list-wrapper {
+    display: inline-block;
+}
+
+.nav-bar-wrapper .login-form-wrapper {
+    display: inline-block;
+    float: right;
+}
+
+.nav-bar-wrapper .nav-bar-list {
+    padding: 30px 16px;
+    margin: 0;
+}
+
+.nav-bar-wrapper .nav-bar-list .nav-bar-list-item {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.nav-bar-wrapper .nav-bar-list .nav-bar-list-item a {
+    color: #FFFFFF;
+}
+
+.nav-bar-wrapper .nav-bar-list .nav-bar-list-item a:hover {
+    color: #ffa533;
+}
+
+.nav-bar-wrapper .nav-bar-menu-icon-button {
+    left: 10px;
+    top: 6px;
+    background-color: #00bcd4;
+    display: inline-block;
+}

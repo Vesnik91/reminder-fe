@@ -1,0 +1,19 @@
+.home-page-left-nav /deep/ .mat-sidenav-container {
+    position: fixed;
+    width: 240px;
+    height:100%;
+}
+
+.home-page-left-nav /deep/ .mat-sidenav {
+    background-color: #7E57C2;
+    width: 100%;
+}
+
+.home-page-left-nav /deep/ .mat-sidenav a {
+    color:  #FFFFFF;
+}
+
+.home-page-left-nav /deep/ .mat-sidenav a:hover {
+    color: #ffa533;
+}
+
