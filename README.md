@@ -2,8 +2,11 @@
 
 Npm commands:
 
+First run `npm install` to download all dependencies required by packageJSON;
 
-`npm start` - runs the compiler and a server at the same time, both in "watch mode".
+Then run `npm start` - runs the compiler and a server at the same time, both in "watch mode".
+
+Additional commands:
 
 `npm run build` - runs the TypeScript compiler once.
 
