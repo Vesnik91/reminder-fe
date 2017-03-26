@@ -9,11 +9,19 @@ import { HomePageComponent }  from '../../components/homePage/homePageComponent/
 import { HomePageNavBarComponent }  from '../../components/homePage/navBarComponent/navBar';
 import { LeftNavComponent }  from '../../components/homePage/leftBarComponent/leftNav';
 
+import { Logger } from '../../services/LoggerService';
+import { LoginService } from '../../services/LoginService';
+
 @NgModule({
   imports:      [ BrowserModule, MaterialModule, FormsModule ],
-  declarations: [ AppComponent, LoginFormComponent ,HomePageComponent, HomePageNavBarComponent, LeftNavComponent ],
+  declarations: [ AppComponent,
+    LoginFormComponent,
+    HomePageComponent,
+    HomePageNavBarComponent,
+    LeftNavComponent
+  ],
   exports:      [],
-  providers:    [],
+  providers:    [ Logger, LoginService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

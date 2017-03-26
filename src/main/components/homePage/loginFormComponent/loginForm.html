@@ -1,11 +1,36 @@
-<div [ngClass]="'login-form'">
-    <form>
-        <md-input-container [ngClass]="'login'" floatPlaceholder="never">
-            <input [(ngModel)]="login" name="login" mdInput placeholder="Login" type="email">
-        </md-input-container>
-        <md-input-container [ngClass]="'password'" floatPlaceholder="never">
-            <input [(ngModel)]="password" name="password" mdInput placeholder="Password" type="password">
-        </md-input-container>
-        <button md-raised-button color="primary" (click)="onLoginButtonClick()">LOGIN</button>
-    </form>
+<div [ngClass]="{
+        'login-form-wrapper': true,
+        'sign-up-type': loginType == loginTypes.signUp,
+        'sign-in-type': loginType == loginTypes.signIn
+        }"
+>
+    <div [ngClass]="'login-form-background-container'">
+        <div [ngClass]="'sign-up-background-container'" *ngIf="loginType == loginTypes.signIn">
+            <div [ngClass]="'sign-up-background-title'">Don't have an account?</div>
+            <div [ngClass]="'sign-up-background-sub-title'">Awesome under title should be here soon!!!</div>
+            <button md-raised-button color="primary" (click)="onSignUpButtonClick()">SIGN UP</button>
+        </div>
+        <div [ngClass]="'sign-in-background-container'" *ngIf="loginType == loginTypes.signUp">
+            <div [ngClass]="'sign-in-background-title'">Have an account?</div>
+            <div [ngClass]="'sign-in-background-sub-title'">Awesome under title should be here soon!!!</div>
+            <button md-raised-button color="primary" (click)="onSignInButtonClick()">SIGN IN</button>
+        </div>
+        <div [ngClass]="'login-form-container'">
+            <form [ngClass]="'login-form'">
+                <div [ngClass]="'login-form-title'">{{loginFormTitle}}</div>
+                <div [ngClass]="'login-from-inputs-container'">
+                    <md-input-container [ngClass]="'user-name'" floatPlaceholder="never" *ngIf="loginType == loginTypes.signUp">
+                        <input [(ngModel)]="userName" name="userName" mdInput placeholder="Full Name" type="text">
+                    </md-input-container>
+                    <md-input-container [ngClass]="'email'" floatPlaceholder="never">
+                        <input [(ngModel)]="email" name="email" mdInput placeholder="Email" type="email">
+                    </md-input-container>
+                    <md-input-container [ngClass]="'password'" floatPlaceholder="never">
+                        <input [(ngModel)]="password" name="password" mdInput placeholder="Password" type="password">
+                    </md-input-container>
+                </div>
+                <button md-raised-button color="primary">LOGIN</button>
+            </form>
+        </div>
+    </div>
 </div>

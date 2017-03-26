@@ -1,21 +1,134 @@
-.login-form {
-    margin-top: 14px;
-    padding: 0 16px;
+.login-form-wrapper /deep/ .mat-raised-button {
+    font-size: 12px;
+    line-height: normal;
+    height: 30px;
+    width: 120px;
+}
+
+.login-form-wrapper {
+    width: 90%;
+    margin: auto;
+    height: 300px;
+}
+
+.login-form-wrapper .login-form-background-container {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 3px;
     position: relative;
+    min-width: 600px;
+    max-width: 750px;
+}
+.login-form-wrapper .login-form-background-container .sign-up-background-container,
+.login-form-wrapper .login-form-background-container .sign-in-background-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-container {
+    float: left;
+}
+
+.login-form-wrapper .login-form-background-container .sign-in-background-container {
+    float: right;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-title,
+.login-form-wrapper .login-form-background-container .sign-in-background-title {
+    font-size: 26px;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-sub-title,
+.login-form-wrapper .login-form-background-container .sign-in-background-sub-title,
+.login-form-wrapper .login-form-background-container .sign-up-background-title,
+.login-form-wrapper .login-form-background-container .sign-in-background-title {
+    padding: 0 24px 0 48px;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-container /deep/ .mat-input-placeholder,
+.login-form-wrapper .login-form-background-container .sign-in-background-container /deep/ .mat-input-placeholder {
+    margin-top: 32px;
+    width: 160px;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-container /deep/ .mat-raised-button,
+.login-form-wrapper .login-form-background-container .sign-in-background-container /deep/ .mat-raised-button {
+    margin-top: 32px;
+    margin-left: 48px;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+.login-form-wrapper .login-form-background-container .sign-up-background-container
+.mat-raised-button /deep/ .mat-ripple-element,
+.login-form-wrapper .login-form-background-container .sign-in-background-container
+.mat-raised-button /deep/ .mat-ripple-element {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.login-form-wrapper .login-form {
+    width: 38%;
+    position: absolute;
+    height: 100%;
+    padding: 24px 40px;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: -24px;
+    transition: left cubic-bezier(0,1.18,0.5,1.36) 500ms;
+}
+
+.login-form-wrapper.sign-up-type .login-form {
+    left: 32px;
+}
+
+.login-form-wrapper.sign-in-type .login-form {
+    left: calc(62% - 112px);
+}
+
+.login-form .user-name,
+.login-form .email,
+.login-form .password {
+    width: 100%;
+    margin: 0.7em 0;
+}
+
+.login-form .login-form-title {
+    color: #E57373;
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.login-form-wrapper.sign-in-type .login-form .login-form-title {
+    margin-top: 40px;
+}
+
+.login-form .login-from-inputs-container {
+    margin-top: 32px;
 }
 
 .login-form input {
-    color: #FFFFFF;
+    color: rgb(0,0,0);
     font-size: 12px;
 }
 
+.login-form /deep/ .mat-input-wrapper {
+    margin: 0;
+}
+
 .login-form /deep/ .mat-input-placeholder {
-    padding-top: 1.5em;
+    padding-top: 20px;
     font-size: 12px;
 }
 
 .login-form /deep/ .mat-raised-button {
-    font-size: 12px;
-    line-height: normal;
-    height: 30px;
+    float: right;
+    margin-top: 24px;
+    background-color: #E57373;
 }
